@@ -89,4 +89,38 @@
     }
 }
   
-  
+@media ( max-width: 1013px ) {
+    .home {
+        height: auto;
+        display: block;
+        padding-bottom: 80px;
+        
+        .home-left {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 40px;
+
+            .home-left-content {
+                padding: 0;
+            }
+        }
+
+        .home-right {
+            width: 100%;
+            display: block;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .juubi {
+            position: relative;
+            box-shadow: none;
+
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+}
