@@ -1,6 +1,59 @@
 <div class="zero-one">
 
     <div class="zero-one-section">
+        <div class="zero-one-header">
+            <div class="image-user">
+                <img src="assets/user.png" alt="user.png">
+                <div class="bg-dot-online">
+                    <div class="dot-online"></div>
+                </div>
+            </div>
+            <form class="sprint-select" [formGroup]="sprintForm">
+                <mat-form-field appearance="outline">
+                    <mat-label class="label">Sprint 1</mat-label>
+                    <mat-select
+                        formControlName="sprint"
+                    >   
+                        <mat-option 
+                            *ngFor="let sprint of sprints"
+                            [value]="sprint"
+                        >{{ sprint }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <p>Duration: 33 days</p>
+            </form>
+            <button 
+                mat-stroked-button
+                class="sprint-btn"
+                (click)="sendSprint( sprintForm );"
+            >Open</button>
+
+            <div class="zero-one-header-btns">
+                <button mat-stroked-button color="primary">
+                    <span class="bold-part">
+                        Timebox:
+                    </span> 13 February - 17 March 2023
+                </button>
+                <button mat-stroked-button color="primary">
+                    <span class="bold-part">
+                        Tasks:
+                    </span> 7/<span class="bold-part">10</span>
+                </button>
+                <button mat-stroked-button color="primary">
+                    <span class="bold-part">
+                        Hours Worked:
+                    </span> 9011h 9m
+                </button>
+                <button mat-stroked-button color="primary">
+                    <span class="bold-part">
+                        Completed:
+                    </span> 7/10
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="zero-one-section">
         <div class="mat-tab-group-border"></div>
         <mat-tab-group>
             <mat-tab label="Task Burndown">

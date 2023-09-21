@@ -1,5 +1,5 @@
 import { Component, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TitlePageService } from 'src/app/services/title_page.service';
 
 @Component({
@@ -9,6 +9,18 @@ import { TitlePageService } from 'src/app/services/title_page.service';
   encapsulation: ViewEncapsulation.None
 })
 export class ZeroOneComponent implements OnDestroy {
+
+   /**
+   * * layout information
+   * @param sprints
+   * @type Array of strings
+   */
+   public sprints: string[] = [
+    'Sprint 1', 
+    'Sprint 2', 
+    'Sprint 3',
+    'Sprint 4',
+  ];
 
   /**
    * * layout information
@@ -41,6 +53,9 @@ export class ZeroOneComponent implements OnDestroy {
     taskStatus: [ '', [ Validators.required ]],
     responsible: [ '', [ Validators.required ]],
   });
+  public sprintForm = this.fb.group({
+    sprint: [ '', [ Validators.required ]],
+  });
 
   constructor(
     private readonly fb: FormBuilder,
@@ -59,6 +74,13 @@ export class ZeroOneComponent implements OnDestroy {
     if( this.loginForm.invalid ) return;
     
     console.log( this.loginForm.getRawValue() );
+  }
+
+  sendSprint( form: FormGroup ): void {
+
+    if( form.invalid ) return;
+    
+    console.log( form.getRawValue() );
   }
 
 }
