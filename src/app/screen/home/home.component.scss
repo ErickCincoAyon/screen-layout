@@ -75,7 +75,7 @@
 
     .juubi {
         position: absolute;
-        left: 10px;
+        left: 80px;
         bottom: -20px;
         padding: 10px 20px;
         box-shadow: $box-shadow;
@@ -117,6 +117,8 @@
         .juubi {
             position: relative;
             box-shadow: none;
+            left: 0;
+            width: 100%;
 
             h1 {
                 text-align: center;
