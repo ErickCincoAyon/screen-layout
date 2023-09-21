@@ -34,7 +34,7 @@ export class ZeroOneComponent implements OnDestroy {
     'User NestJS',
   ];
 
-
+  public taskCompleteValue: number = 36;
   public title: string = 'Zero One Page';
   public loginForm = this.fb.group({
     historyStatus: [ '', [ Validators.required ]],

@@ -12,7 +12,7 @@ export class ScreenComponent implements OnInit {
   public openSidebar: boolean = false;
   @ViewChild('sidebar', { static: false }) sidebar!: ElementRef;
   @ViewChild('btnSidebar', { static: false }) btnSidebar!: ElementRef;
-  public title: string = 'Home';
+  public title: string = '';
   public suscribeTitle: string | null = null;
 
   constructor(

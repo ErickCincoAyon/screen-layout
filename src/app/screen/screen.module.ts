@@ -6,12 +6,14 @@ import { ScreenRoutingModule } from './screen-routing.module';
 import { ComponentsModule } from '../components/components.module';
 import { ZeroTwoComponent } from './zero-two/zero-two.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     ZeroOneComponent,
     ScreenComponent,
-    ZeroTwoComponent
+    ZeroTwoComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,

@@ -71,7 +71,7 @@
                                 <p>
                                     Tasks: 14&nbsp;
                                     <span>
-                                        | Completed: 36%
+                                        | Completed: {{ taskCompleteValue }}%
                                     </span>
                                 </p>
                             </div>
@@ -79,7 +79,7 @@
                             <mat-progress-bar 
                                 class="progress-bar"
                                 mode="determinate" 
-                                value="36"
+                                [value]="taskCompleteValue"
                             ></mat-progress-bar>
                         </div>
                     </div>
