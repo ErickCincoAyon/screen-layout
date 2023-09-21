@@ -1,0 +1,95 @@
+@import '../scss/colors.scss';
+
+.container {
+    width: 100%;
+
+    .sub-container {
+        display: flex;
+        position: relative;
+        width: 100%;
+
+        .toggle-sidebar {
+            position: absolute;
+            display: flex;
+            margin: 15px 0 0 15px;
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            border: 0;
+            background-color: white;
+            box-shadow: $box-shadow;
+            transition: $transition;
+
+            i {
+                margin: -1px 0 0 0;
+                padding-left: 1px;
+                font-size: 15px;
+                transition: $transition;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: #202020;
+                border-radius: 2px;
+
+                i {
+                    color: white;
+                }
+            }
+        }
+
+        .sidebar {
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+            height: 100vh;
+            margin-left: -200px;
+        }
+
+        .content {
+            flex: auto;
+            padding: 15px;
+
+            header {
+                width: 100%;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #e1e1e1;
+
+                h1 {
+                    width: 60%;
+                    height: 50px;
+                    margin: 0 auto;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .child-container {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media ( max-width: 1013px ) {
+    .container {
+        .sub-container {
+            .content {
+                header {
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

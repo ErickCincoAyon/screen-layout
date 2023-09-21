@@ -1,0 +1,91 @@
+@import '../../scss/colors.scss';
+.sidebar {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .sidebar-first-div {
+        width: 100%;
+        height: 15px;
+        border-right: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+        background-color: #e1e1e1;
+        box-shadow: $box-shadow;
+    }
+
+    h3 {
+        margin: 0;
+        width: 100%;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-variant: small-caps;
+        font-weight: bold;
+        letter-spacing: 1px;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .sidebar-list {
+        width: 100%;
+        height: calc( 100vh - 65px );
+        border-right: 1px solid #e1e1e1;
+        border-top: 1px solid #e1e1e1;
+        background-color: #e1e1e1;
+        padding: 20px 0;
+        box-shadow: $box-shadow;
+
+        h5 {
+            width: 90%;
+            margin: 0 auto;
+            padding: 10px;
+            color: #505050;
+            display: block;
+            margin-bottom: 10px;
+
+            span {
+                margin-right: 10px;
+
+                i {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        li {
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 0px 10px 20px;
+            text-transform: uppercase;
+            color: #575757;
+            font-weight: bold;
+            user-select: none;
+            transition: $transition;
+            cursor: pointer;
+
+            span:first-child {
+                float: right;
+                margin-right: 10px;
+                font-size: 20px;
+                
+                i {
+                    transition: $transition;
+                }
+            }
+
+            &:hover {
+                background-color: white;
+                box-shadow: $shadow;
+
+                span i {
+                    color: $action;
+                }
+            }
+        }
+    }
+}

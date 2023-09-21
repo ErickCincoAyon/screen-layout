@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="sub-container">
+        <button 
+            class="toggle-sidebar"
+            (click)="toggleSidebar( !openSidebar );$event.stopPropagation();"
+        #btnSidebar>
+            <i class="bars icon"></i>
+        </button>
+        <div class="sidebar" #sidebar>
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="content">
+            <header>
+                <h1 *ngIf="suscribeTitle === null">{{ title }}</h1>
+                <h1 *ngIf="suscribeTitle !== null">{{ suscribeTitle }}</h1>
+            </header>
+            <div class="child-container">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

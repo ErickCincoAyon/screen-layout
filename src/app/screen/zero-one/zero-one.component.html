@@ -1,0 +1,100 @@
+<div class="zero-one">
+
+    <div class="zero-one-section">
+        <div class="mat-tab-group-border"></div>
+        <mat-tab-group>
+            <mat-tab label="Task Burndown">
+                <div class="zero-one-graphic"></div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+    
+    <div class="zero-one-section">
+        <div class="mat-tab-group-border"></div>
+        <mat-tab-group>
+            <mat-tab label="Historias">
+                <div class="stories historias">
+                    <div class="content-stories">
+                        <form [formGroup]="loginForm" (ngSubmit)="sendForm();">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Estatus Historia</mat-label>
+                                <mat-select
+                                    formControlName="historyStatus"
+                                >   
+                                    <mat-option 
+                                        *ngFor="let status of statusTypes"
+                                        [value]="status"
+                                    >{{ status }}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>Estatus Tarea</mat-label>
+                                <mat-select
+                                    formControlName="taskStatus"
+                                >
+                                    <mat-option 
+                                        *ngFor="let status of statusTypes"
+                                        [value]="status"
+                                    >{{ status }}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>Responsable</mat-label>
+                                <mat-select
+                                    formControlName="responsible"
+                                >
+                                    <mat-option 
+                                        *ngFor="let responsible of responsibles"
+                                        [value]="responsible"
+                                    >{{ responsible }}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <button mat-stroked-button color="primary">Create User Story</button>
+                        </form>
+
+                        <div class="deadline">
+                            <h3>As a Bunny Farmer, I want to implement Carrot Management software in order to optimize the management of my carrot harvest</h3>
+                            <div class="information-btns">
+                                <button mat-stroked-button color="primary">
+                                    Deadline: 14-Oct-23
+                                </button>
+                                <button mat-stroked-button color="primary">
+                                    Horas por Trabajar: 15 hrs.
+                                </button>
+                                <button mat-stroked-button color="primary">
+                                    Horas Trabajadas: 12 hrs.
+                                </button>
+
+                                <p>
+                                    Tasks: 14&nbsp;
+                                    <span>
+                                        | Completed: 36%
+                                    </span>
+                                </p>
+                            </div>
+
+                            <mat-progress-bar 
+                                class="progress-bar"
+                                mode="determinate" 
+                                value="36"
+                            ></mat-progress-bar>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Tareas">
+                <div class="stuffed">
+                    <div></div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Mis Pendientes">
+                <div class="stuffed">
+                    <div></div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
