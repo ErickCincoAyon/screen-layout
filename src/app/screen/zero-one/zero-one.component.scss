@@ -106,30 +106,35 @@ mat-label:hover:not(.mat-tab-disabled) {
                 }
                 
             }
+            
+            form {
+                display: flex;
+                flex: auto;
 
-            .sprint-select {
-                width: 200px;
-                height: 90px;
-
-                mat-label {
-                    font-weight: bold;
-                    color: #101010;
-                    letter-spacing: .5px;
+                .sprint-select {
+                    width: 200px;
+                    height: 90px;
+    
+                    mat-label {
+                        font-weight: bold;
+                        color: #101010;
+                        letter-spacing: .5px;
+                    }
+                    
+                    p {
+                        margin-top: -10px;
+                        color: #858585;
+                    }
                 }
-                
-                p {
-                    margin-top: -10px;
-                    color: #858585;
+    
+                .sprint-btn {
+                    margin-left: auto;
+                    height: 56px;
+                    padding: 0 30px;
+                    color: rgb(71, 138, 51);
+                    border: 2px solid rgb(95, 180, 69);
+                    background-color: rgb(202, 240, 205);
                 }
-            }
-
-            .sprint-btn {
-                margin-left: auto;
-                height: 56px;
-                padding: 0 30px;
-                color: rgb(71, 138, 51);
-                border: 2px solid rgb(95, 180, 69);
-                background-color: rgb(202, 240, 205);
             }
             
             .zero-one-header-btns {

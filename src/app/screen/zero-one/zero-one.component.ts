@@ -76,11 +76,11 @@ export class ZeroOneComponent implements OnDestroy {
     console.log( this.loginForm.getRawValue() );
   }
 
-  sendSprint( form: FormGroup ): void {
+  sendSprint(): void {
 
-    if( form.invalid ) return;
+    if( this.sprintForm.invalid ) return;
     
-    console.log( form.getRawValue() );
+    console.log( this.sprintForm.getRawValue() );
   }
 
 }

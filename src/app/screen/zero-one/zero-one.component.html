@@ -8,25 +8,26 @@
                     <div class="dot-online"></div>
                 </div>
             </div>
-            <form class="sprint-select" [formGroup]="sprintForm">
-                <mat-form-field appearance="outline">
-                    <mat-label class="label">Sprint 1</mat-label>
-                    <mat-select
-                        formControlName="sprint"
-                    >   
-                        <mat-option 
-                            *ngFor="let sprint of sprints"
-                            [value]="sprint"
-                        >{{ sprint }}</mat-option>
-                    </mat-select>
-                </mat-form-field>
-                <p>Duration: 33 days</p>
+            <form [formGroup]="sprintForm" (ngSubmit)="sendSprint();">
+                <div class="sprint-select">
+                    <mat-form-field appearance="outline">
+                        <mat-label class="label">Sprint 1</mat-label>
+                        <mat-select
+                            formControlName="sprint"
+                        >   
+                            <mat-option 
+                                *ngFor="let sprint of sprints"
+                                [value]="sprint"
+                            >{{ sprint }}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <p>Duration: 33 days</p>
+                </div>
+                <button 
+                    mat-stroked-button
+                    class="sprint-btn"
+                >Open</button>
             </form>
-            <button 
-                mat-stroked-button
-                class="sprint-btn"
-                (click)="sendSprint( sprintForm );"
-            >Open</button>
 
             <div class="zero-one-header-btns">
                 <button mat-stroked-button color="primary">
